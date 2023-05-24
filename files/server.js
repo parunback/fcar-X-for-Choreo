@@ -136,14 +136,3 @@ app.use(
     ws: true // 是否代理websockets
   })
 );
-
-//启动核心脚本运行web,哪吒和argo
-exec("bash entrypoint.sh", function (err, stdout, stderr) {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  console.log(stdout);
-});
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
